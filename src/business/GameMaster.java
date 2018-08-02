@@ -6,10 +6,11 @@ import java.io.PrintStream;
 
 public class GameMaster {
 
-    private int roundLimit;
+    private final IGame game;
+    private final PrintStream outputStream;
+    private final int roundLimit;
+
     private int currentRound;
-    private IGame game;
-    private PrintStream outputStream;
 
     public GameMaster(final IGame game, final int roundLimit, final PrintStream outputStream) {
         this.currentRound = 0;

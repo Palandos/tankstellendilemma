@@ -5,9 +5,9 @@ import business.player.Player;
 
 public class GasStationGame implements IGame {
 
-    private Player player1;
-    private Player player2;
-    private ProfitMatrix profits;
+    private final Player player1;
+    private final Player player2;
+    private final ProfitMatrix profits;
 
     public GasStationGame(final Player player1, final Player player2, final ProfitMatrix profitMatrix) {
         this.player1 = player1;

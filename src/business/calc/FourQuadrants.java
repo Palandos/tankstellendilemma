@@ -2,10 +2,10 @@ package business.calc;
 
 public class FourQuadrants implements ProfitMatrix {
 
-    private int temptation;
-    private int reward;
-    private int penalty;
-    private int sPayoff;
+    private final int temptation;
+    private final int reward;
+    private final int penalty;
+    private final int sPayoff;
 
     public FourQuadrants(final int temptation, final int reward, final int penalty, final int sPayoff) {
         this.temptation = temptation;

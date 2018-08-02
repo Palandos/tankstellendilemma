@@ -4,7 +4,7 @@ import business.strategy.Strategy;
 
 public class GasStation implements Player {
 
-    private Strategy strategy;
+    private final Strategy strategy;
     private int money = 0;
 
     public GasStation(final Strategy strategy) {
