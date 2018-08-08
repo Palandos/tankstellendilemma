@@ -50,8 +50,8 @@ public class Arena {
                 // Play the game
                 final int[] result = master.playTheGame();
                 output.printf("Player1 with strategy %s: %d, Player2 with strategy %s: %d\n",
-                        strategiesPlayer1[i].toString(), result[0],
-                        strategiesPlayer2[j].toString(), result[1]);
+                        strategiesPlayer1[i].getName(), result[0],
+                        strategiesPlayer2[j].getName(), result[1]);
             }
         }
     }
