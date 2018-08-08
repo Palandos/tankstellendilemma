@@ -4,6 +4,6 @@ public interface IGame {
 
     boolean isValid();
     void playIteration();
-    String document();
+    int[] getResult();
 
 }

@@ -8,4 +8,9 @@ public class AlwaysCooperation implements Strategy {
     public boolean apply() {
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "AlwaysCooperation";
+    }
 }

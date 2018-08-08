@@ -1,6 +1,6 @@
 package integration;
 
-import business.GameMaster;
+import business.organisation.GameMaster;
 import business.calc.FourQuadrants;
 import business.calc.ProfitMatrix;
 import business.game.GasStationGame;
@@ -39,10 +39,11 @@ public class GameTest_10Rounds {
         final GameMaster master = new GameMaster(game, roundLimit, System.out);
 
         // When
-        master.playTheGame();
+        final int[] result = master.playTheGame();
 
         // Then
-        assertEquals("Player1: 10000; Player2: -30000;", game.document());
+        assertEquals(10000, result[0]);
+        assertEquals(-30000, result[1]);
     }
 
     @Test
@@ -57,10 +58,11 @@ public class GameTest_10Rounds {
         final GameMaster master = new GameMaster(game, roundLimit, System.out);
 
         // When
-        master.playTheGame();
+        final int[] result = master.playTheGame();
 
         // Then
-        assertEquals("Player1: 6500; Player2: -13500;", game.document());
+        assertEquals(6500, result[0]);
+        assertEquals(-13500, result[1]);
     }
 
     @Test
@@ -75,10 +77,11 @@ public class GameTest_10Rounds {
         final GameMaster master = new GameMaster(game, roundLimit, System.out);
 
         // When
-        master.playTheGame();
+        final int[] result = master.playTheGame();
 
         // Then
-        assertEquals("Player1: 2500; Player2: -17500;", game.document());
+        assertEquals(2500, result[0]);
+        assertEquals(-17500, result[1]);
     }
 
 }

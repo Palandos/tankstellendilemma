@@ -1,11 +1,13 @@
 package business;
 
 import business.game.IGame;
+import business.organisation.GameMaster;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.PrintStream;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
@@ -52,14 +54,14 @@ public class GameMasterTest {
     }
 
     @Test
-    public void documentGameRound1() {
+    public void resultGameRound1() {
         when(game.isValid()).thenReturn(true);
-        when(game.document()).thenReturn("Hello World");
+        when(game.getResult()).thenReturn(new int[] {300, 200});
         final GameMaster master = new GameMaster(game, 1, outputStream);
 
-        master.playTheGame();
+        final int[] result = master.playTheGame();
 
-        verify(outputStream).printf("Round %d: ", 1);
-        verify(outputStream).printf("%s\n", "Hello World");
+        assertEquals(300, result[0]);
+        assertEquals(200, result[1]);
     }
 }

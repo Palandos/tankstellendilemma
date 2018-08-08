@@ -8,4 +8,9 @@ public class AlwaysTreason implements Strategy {
     public boolean apply() {
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "AlwaysTreason";
+    }
 }

@@ -30,7 +30,7 @@ public class GasStationGame implements IGame {
     }
 
     @Override
-    public String document() {
-        return "Player1: " + player1.getMoney() + "; Player2: " + player2.getMoney() + ";";
+    public int[] getResult() {
+        return new int[] {player1.getMoney(), player2.getMoney()};
     }
 }

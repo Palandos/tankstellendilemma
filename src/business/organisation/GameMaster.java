@@ -1,4 +1,4 @@
-package business;
+package business.organisation;
 
 import business.game.IGame;
 
@@ -19,21 +19,16 @@ public class GameMaster {
         this.outputStream = outputStream;
     }
 
-    public void playTheGame() {
+    public int[] playTheGame() {
         if (!game.isValid()) {
             outputStream.println("Game is invalid!");
-            return;
+            return null;
         }
 
         while (currentRound < roundLimit){
             game.playIteration();
             currentRound++;
-            document();
         }
-    }
-
-    private void document() {
-        outputStream.printf("Round %d: ", currentRound);
-        outputStream.printf("%s\n", game.document());
+        return game.getResult();
     }
 }

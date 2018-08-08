@@ -68,11 +68,14 @@ public class GasStationGameTest {
     }
 
     @Test
-    public void documentsRightString() {
+    public void documentsRightValues() {
         when(player1.getMoney()).thenReturn(100);
         when(player2.getMoney()).thenReturn(200);
 
-        assertEquals("Player1: 100; Player2: 200;", game.document());
+        final int[] result = game.getResult();
+
+        assertEquals(100, result[0]);
+        assertEquals(200, result[1]);
     }
 
 }
