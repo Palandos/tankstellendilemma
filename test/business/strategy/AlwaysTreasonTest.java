@@ -35,7 +35,7 @@ public class AlwaysTreasonTest {
 
     @Test
     public void testToString() {
-        assertEquals("AlwaysTreason", strategy.toString());
+        assertEquals("AlwaysTreason", strategy.getName());
     }
 
 

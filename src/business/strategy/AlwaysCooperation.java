@@ -9,8 +9,4 @@ public class AlwaysCooperation implements Strategy {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "AlwaysCooperation";
-    }
 }

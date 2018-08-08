@@ -42,7 +42,7 @@ public class AlternatingTest {
 
     @Test
     public void testToString() {
-        assertEquals("Alternating", strategy.toString());
+        assertEquals("Alternating", strategy.getName());
     }
 
 }

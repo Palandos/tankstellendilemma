@@ -35,7 +35,7 @@ public class AlwaysCooperationTest {
 
     @Test
     public void testToString() {
-        assertEquals("AlwaysCooperation", strategy.toString());
+        assertEquals("AlwaysCooperation", strategy.getName());
     }
 
 }

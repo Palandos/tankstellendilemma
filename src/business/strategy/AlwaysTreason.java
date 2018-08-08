@@ -9,8 +9,4 @@ public class AlwaysTreason implements Strategy {
         return false;
     }
 
-    @Override
-    public String toString() {
-        return "AlwaysTreason";
-    }
 }

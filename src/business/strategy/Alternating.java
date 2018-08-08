@@ -14,8 +14,4 @@ public class Alternating implements Strategy {
         return lastDecision;
     }
 
-    @Override
-    public String toString() {
-        return "Alternating";
-    }
 }
